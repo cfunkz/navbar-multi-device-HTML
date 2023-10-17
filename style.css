@@ -5,34 +5,34 @@ body {
     padding: 0;
     margin: 0;
 }
-.navigation {
-    display: flex; /*Use flex to have seperate blocks for menu/logo*/
-    justify-content: space-between;
-    background-color: yellow;
-    height: 2em; /*Use EM because it is relative and supports multiple OS*/
-    align-items: center; /*Align items in navigation container in the middle*/
-    padding: 1.5em; /*Use EM because it is relative and supports multiple OS*/
+.header {
+    position: relative; /*Relative to body*/
+    display: flex; /*Use flex to have seperate blocks for menu*/
+    align-items: center; /*Align items in middle*/
+    background-color: #ffcc00;
+    justify-content: space-between; /*Equal space between content*/
+    padding: 0.2em;
 }
-.navigation ul {
-    display: flex; /*Use flex again to align UL menu items*/
-    list-style: none; /*Remove list style*/
-    padding: 0;
-    margin: 0;
-}
-.main-menu li {
-    outline: auto;
-}
-.main-menu a {
-    text-decoration: none;
-}
-.sub-menu {
-    display: flex;
-    flex-direction: column; /* Submenu items to be displayed vertically */
-    position: absolute;
-    &.sub-menu li{
-        display: none; /*Hide sub-menu initially*/
+.header-buttons {
+    font-weight: bold;
+    font-size: 2em;
+    font-weight: bold;
+    background: transparent;
+    border-color: transparent;
+    border-width: 0.2em;
+    cursor: pointer;
+    &:hover {
+        background-color: #ffcc00;
+        border-color: black;
+        border-radius: 0.2em;
     }
 }
-.main-menu li:hover .sub-menu li {
-    display: flex;
+.logo-container {
+    outline: auto;
+    & a {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        color: black;
+        font-size: 2em;
+    }
 }
