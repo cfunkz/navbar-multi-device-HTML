@@ -44,7 +44,7 @@ body {
     }
 }
 
-.logo::before {
+#account-button::before {
   content: "\f015"; /* Unicode character for the Font Awesome house icon (fa-house) */
   font-family: "Font Awesome 5 Free";
 }
