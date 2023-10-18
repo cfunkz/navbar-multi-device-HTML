@@ -20,14 +20,43 @@
     </div>
     <nav class="navigation">
       <ul id="nav-id" class="menu">
-        <li><button id="log-in" class="menu-buttons">Log In</button><button id="sign-up" class="menu-buttons">Register</button></li>
+        <li><button id="log-in" class="menu-buttons" onclick="showLogin()">Log In</button><button id="sign-up" class="menu-buttons" onclick="showRegister()">Register</button></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
     <div class="content">
-      <p>asdasdasd</p>
+      <form id="register-form" class="entry-form" method="post">
+        <div class="close-button" onclick="closeForms()">X</div>
+          <div class="label-text">REGISTER</div>
+          <div class="entry-container">
+              <input class="entry-field" type="username" placeholder="Username">
+              <input class="entry-field" type="email" placeholder="E-Mail">
+              <input class="entry-field" type="password" placeholder="Password">
+              <div class="tnc-check">
+                <input type="checkbox">I accept <a href="#">Terms</a> & <a href="#">Conditions</a>
+              </div>
+              <button id="submit-register" class="register-button" type="submit">REGISTER</button>
+          </div>
+      </form>
+      <form id="login-form" class="entry-form" method="get">
+        <div class="close-button" onclick="closeForms()">X</div>
+          <div class="label-text">LOG INTO ACCOUNT</div>
+          <div class="entry-container">
+              <input class="entry-field" type="email" placeholder="E-Mail">
+              <input class="entry-field" type="password" placeholder="Password">
+              <div class="password-check">
+                <a href="#">Forgot Password?</a>
+              </div>
+              <button id="submit-login" class="login-button" type="submit">LOG IN</button>
+          </div>
+          <div class="social-login">
+            <button class="google-button" type="button" name="google-button" method="get"><ion-icon name="logo-google"></ion-icon></button>
+            <button class="facebook-button" type="button" name="facebook-button" method="get"><ion-icon name="logo-facebook"></ion-icon></button>
+            <button class="discord-button" type="button" name="discord-button" method="get"><ion-icon name="logo-discord"></ion-icon></button>
+          </div>
+      </form>
     </div>
   </div>
   <script src="script.js"></script>
