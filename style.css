@@ -44,7 +44,10 @@ body {
     }
 }
 
-
+.logo::before {
+  content: "\f015"; /* Unicode character for the Font Awesome house icon (fa-house) */
+  font-family: "Font Awesome 5 Free";
+}
 /*(Problem: when zooming going out of place.) Solution for adjusting size for smaller devices */
 @media (max-width: 768px) {
     .logo-container {
