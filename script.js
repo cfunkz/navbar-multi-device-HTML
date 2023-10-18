@@ -57,9 +57,3 @@ function showLogin() {
         loginForm.style.display = "none";
     }
 }
-    
-    
-    
-    
-    
-    
