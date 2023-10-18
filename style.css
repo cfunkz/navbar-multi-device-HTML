@@ -20,9 +20,9 @@ body {
     justify-content: space-between; /*Equal space between content*/
 }
 .header-buttons {
-    width: 2em;
-    height: 2em;
-    font-size: 3em;
+    width: 3em;
+    height: 3em;
+    font-size: 2em;
     font-weight: bold;
     background: transparent;
     border-color: transparent;
@@ -34,19 +34,26 @@ body {
         border-radius: 0.25em;
     }
 }
-.logo-container {
-    margin: 0.2em; /*Added margin for logo*/
-    outline: dotted;
+.logo {
     font-size: 4em;
-    & a {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: black;
-    }
+    margin: 0.2em; /*Added margin for logo*/
+    border: dotted;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+.menu{
+    display: none;
+}
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FFD866;
 }
 
-/*(Problem: when zooming going out of place.) Solution for adjusting size for smaller devices */
+/*(Problem: when zooming going out of place.) Solution for adjusting size for smaller devices under 768px */
 @media (max-width: 768px) {
-    .logo-container {
+    .logo {
         font-size: 2em; /* Adjust the font size for smaller screens */
     }
     .header-buttons {

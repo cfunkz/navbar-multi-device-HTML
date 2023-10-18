@@ -10,40 +10,46 @@
 <body>
   <div class="main-container">
     <div class="header">
-      <button class="header-buttons" id="account-button">👤</button>
-      <div class="logo-container">
-        <a href="#">LOGOTEXT</a>
-      </div>
-      <button class="header-buttons" id="menu-button">☰</button>
+      <button class="header-buttons" id="home-button" onclick="refreshPage()">
+        <i class="fa-solid fa-house"></i>
+      </button>
+      <a class="logo" href="#">LOGOTEXT</a>
+      <button class="header-buttons" id="menu-button" onclick="showNav()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
     <nav class="navigation">
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
+      <ul id="nav-id" class="menu">
+        <li><a href="">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
+    <div class="content">
+      <p>asdasdasd</p>
+    </div>
   </div>
+  <script>
+      /*Function for showing/hiding menu*/
+      var navBar = document.getElementById("nav-id");
+      function showNav() {
+          if (navBar.style.display === "none") { /*If navBar == none then open nav, else close.*/
+            navBar.style.display = "block";
+          } 
+          else {
+            navBar.style.display = "none";
+          }
+        }
+      /*Function for home-button*/
+      function refreshPage() {
+          location.reload();
+        }
+  </script>
+  <script src="https://kit.fontawesome.com/3a95edba20.js" crossorigin="anonymous"></script>
 </body>
 
 <footer>
-    <div class="footer-left">
-        <ul class="social-media">
-            <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="twitter-icon.png" alt="Twitter"></a></li>
-            <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
-        </ul>
-    </div>
-    <div class="footer-middle">
-        &copy; 2023 Davids B
-    </div>
-    <div class="footer-right">
-        <ul class="footer-links">
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
-        </ul>
-    </div>
 </footer>
 
 </html>
