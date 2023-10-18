@@ -58,14 +58,21 @@ footer {
     color: #fff;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
 }
 
 .footer-left, .footer-right {
     flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .social-media, .footer-links {
@@ -83,7 +90,13 @@ footer {
     text-decoration: none;
 }
 
-.footer-middle {
-    flex: 2;
-    text-align: center;
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        flex: none;
+    }
 }
