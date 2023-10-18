@@ -1,20 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box; /* Include padding and borders within the width */
+}
 body {
     background-color: white;
     background-size: cover;
     font-family: Courier New;
-    padding: 0;
-    margin: 0;
 }
 .header {
-    position: relative; /*Relative to body*/
+    position: relative; /*Relative position*/
+    width: 100%;
+    padding: 0.25em;
     display: flex; /*Use flex to have seperate blocks for menu*/
     align-items: center; /*Align items in middle*/
     background-color: #ffcc00;
     justify-content: space-between; /*Equal space between content*/
-    padding: 0.2em;
 }
 .header-buttons {
-    font-weight: bold;
+    width: 3em;
+    height: 3em;
     font-size: 2em;
     font-weight: bold;
     background: transparent;
@@ -24,15 +31,26 @@ body {
     &:hover {
         background-color: #ffcc00;
         border-color: black;
-        border-radius: 0.2em;
+        border-radius: 0.25em;
     }
 }
 .logo-container {
-    outline: auto;
+    margin: 0.2em; /*Added margin for logo*/
+    outline: dotted;
+    font-size: 4em;
     & a {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        text-decoration: none;
         color: black;
-        font-size: 2em;
+    }
+}
+
+
+/*(Problem: when zooming going out of place.) Solution for adjusting size for smaller devices */
+@media (max-width: 768px) {
+    .logo-container {
+        font-size: 2em; /* Adjust the font size for smaller screens */
+    }
+    .header-buttons {
+        font-size: 2em; /* Adjust the font size for smaller screens */
     }
 }
