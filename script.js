@@ -1,5 +1,5 @@
       /*Function for showing/hiding menu*/
-      var navBar = document.getElementById("nav-id");
+      var navBar = document.getElementById("nav-id"); /*Get element by their ID*/
 
       function showNav() {
           if (navBar.style.display === "none" || navBar.style.display === "") { /*If navBar == none OR|| empty string then open nav, else close.*/
@@ -9,6 +9,7 @@
             navBar.style.display = "none";
           }
         }
+
       /*Function for home-button*/
       function refreshPage() {
           location.reload();
