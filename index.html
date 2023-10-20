@@ -20,29 +20,32 @@
     </div>
     <nav class="navigation">
       <ul id="nav-id" class="menu">
+        <div class="button-container">
+          <button id="log-in" class="menu-buttons" onclick="showLogin()">Log In</button>
+          <button id="sign-up" class="menu-buttons" onclick="showRegister()">Register</button>
+        </div>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
-        <li><button id="log-in" class="menu-buttons" onclick="showLogin()">Log In</button><button id="sign-up" class="menu-buttons" onclick="showRegister()">Register</button></li>
       </ul>
     </nav>
     <div class="content">
       <form id="register-form" class="entry-form" method="post">
-        <div class="close-button" onclick="closeForms()">X</div>
-          <div class="label-text">REGISTER</div>
+          <label class="close-button" onclick="closeForms()">X</label>
+          <label>REGISTER</label>
           <div class="entry-container">
               <input class="entry-field" type="username" placeholder="Username">
               <input class="entry-field" type="email" placeholder="E-Mail">
               <input class="entry-field" type="password" placeholder="Password">
               <div class="tnc-check">
-                <input type="checkbox">I accept <a href="#">Terms</a> & <a href="#">Conditions</a>
+                <input type="checkbox">I accept the <a href="#">Terms & Conditions</a>
               </div>
               <button id="submit-register" class="register-button" type="submit">REGISTER</button>
           </div>
       </form>
       <form id="login-form" class="entry-form" method="get">
-        <div class="close-button" onclick="closeForms()">X</div>
-          <div class="label-text">LOG INTO ACCOUNT</div>
+          <label class="close-button" onclick="closeForms()">X</label>
+          <label>LOG INTO ACCOUNT</label>
           <div class="entry-container">
               <input class="entry-field" type="email" placeholder="E-Mail">
               <input class="entry-field" type="password" placeholder="Password">
